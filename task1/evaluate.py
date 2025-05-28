@@ -18,7 +18,7 @@ if train_dir_path not in sys.path:
 # 从 base_trainer 导入所需的函数和常量
 # 确保 base_trainer.py 中定义了这些常量或可以从 config 传递
 try:
-    from base_trainer import get_data_loaders, evaluate_model, NUM_CLASSES, BATCH_SIZE, DEFAULT_DATA_PATH_TEST
+    from train.base_trainer import get_data_loaders, evaluate_model, NUM_CLASSES, BATCH_SIZE, DEFAULT_DATA_PATH_TEST
 except ImportError:
     print("错误：无法从 train.base_trainer 导入模块。请确保 evaluate.py 与 train/ 目录在同一级别或正确设置了PYTHONPATH。")
     # 定义一些备用常量，以防导入失败（但这通常表示项目结构或PYTHONPATH问题）
